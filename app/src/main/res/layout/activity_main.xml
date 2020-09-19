@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_centerInParent="true"
+    android:keepScreenOn="true"
+    tools:context=".MainActivity">
+
+    <Switch
+        android:id="@+id/Switch_connection"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="4dp"
+        android:checked="false"
+        android:clickable="false"
+        android:enabled="true"
+        android:text="Connexion"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:id="@+id/TPortail2"
+        android:layout_width="130dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="80dp"
+        android:background="@android:color/holo_blue_bright"
+        android:clickable="false"
+        android:gravity="center"
+        android:text="PORTAIL  GARAGE"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintEnd_toStartOf="@+id/BPortailOuvrir2"
+        app:layout_constraintStart_toEndOf="@+id/BPortailFermer"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/TEtatGarage"
+        android:layout_width="130dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="40dp"
+        android:gravity="center_horizontal"
+        android:text="inconnu"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintEnd_toStartOf="@+id/BGarageOuvrir"
+        app:layout_constraintStart_toEndOf="@+id/BGarageFermer"
+        app:layout_constraintTop_toTopOf="@+id/TGarage" />
+
+    <TextView
+        android:id="@+id/TEtatPortail"
+        android:layout_width="130dp"
+        android:layout_height="40dp"
+        android:gravity="center"
+        android:text="inconnu"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintEnd_toStartOf="@+id/BPortailOuvrir"
+        app:layout_constraintStart_toEndOf="@+id/BPortailFermer2"
+        app:layout_constraintTop_toBottomOf="@+id/TPortail" />
+
+    <Button
+        android:id="@+id/BPortailFermer"
+        android:layout_width="100dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="16dp"
+        android:background="@android:drawable/dialog_holo_light_frame"
+        android:onClick="action"
+        android:tag="[1,1]"
+        android:text="Fermer"
+        app:layout_constraintBottom_toBottomOf="@+id/TPortail2"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/BPortailFermer2"
+        android:layout_width="100dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="16dp"
+        android:background="@android:drawable/dialog_holo_light_frame"
+        android:onClick="action"
+        android:tag="[0,1]"
+        android:text="Fermer"
+        app:layout_constraintBottom_toBottomOf="@+id/TEtatPortail"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/BGarageFermer"
+        android:layout_width="100dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="20dp"
+        android:background="@android:drawable/dialog_holo_light_frame"
+        android:onClick="action"
+        android:tag="[1,0]"
+        android:text="Fermer"
+        app:layout_constraintBottom_toBottomOf="@+id/TEtatGarage"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/BPortailOuvrir"
+        android:layout_width="100dp"
+        android:layout_height="80dp"
+        android:layout_marginEnd="16dp"
+        android:background="@android:drawable/dialog_holo_light_frame"
+        android:onClick="action"
+        android:tag="[0,2]"
+        android:text="Ouvrir"
+        app:layout_constraintBottom_toBottomOf="@+id/TEtatPortail"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/BPortailOuvrir2"
+        android:layout_width="100dp"
+        android:layout_height="60dp"
+        android:layout_marginEnd="16dp"
+        android:background="@android:drawable/dialog_holo_light_frame"
+        android:onClick="action"
+        android:tag="[2,2]"
+        android:text="Ouvrir"
+        app:layout_constraintBottom_toBottomOf="@+id/TPortail2"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/BGarageOuvrir"
+        android:layout_width="100dp"
+        android:layout_height="80dp"
+        android:layout_marginEnd="16dp"
+        android:background="@android:drawable/dialog_holo_light_frame"
+        android:onClick="action"
+        android:tag="[2,0]"
+        android:text="Ouvrir"
+        app:layout_constraintBottom_toBottomOf="@+id/TEtatGarage"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/BGarageUrgence"
+        android:layout_width="130dp"
+        android:layout_height="52dp"
+        android:layout_marginTop="32dp"
+        android:background="@android:drawable/dialog_holo_light_frame"
+        android:gravity="center"
+        android:onClick="action"
+        android:tag="[3,0]"
+        android:text="Urgence"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/TEtatGarage" />
+
+    <TextView
+        android:id="@+id/TPortail"
+        android:layout_width="130dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="80dp"
+        android:background="@android:color/holo_red_dark"
+        android:clickable="false"
+        android:gravity="center"
+        android:text="PORTAIL"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintEnd_toStartOf="@+id/BPortailOuvrir"
+        app:layout_constraintStart_toEndOf="@+id/BPortailFermer2"
+        app:layout_constraintTop_toBottomOf="@+id/TPortail2" />
+
+    <TextView
+        android:id="@+id/TGarage"
+        android:layout_width="130dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="80dp"
+        android:background="@android:color/holo_red_dark"
+        android:gravity="center_horizontal"
+        android:text="GARAGE"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintEnd_toStartOf="@+id/BGarageOuvrir"
+        app:layout_constraintStart_toEndOf="@+id/BGarageFermer"
+        app:layout_constraintTop_toBottomOf="@+id/TEtatPortail" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
